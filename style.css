@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+:root {
+  --first-color: #000;
+  --white-color: #fafaff;
+  --dark-color: #2a3b47;
+  --text-color: #697477;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+header {
+  background-color: var(--first-color);
+  height: 60px;
+  color: var(--white-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.logo {
+  width: 20%;
+}
+nav {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav a {
+  color: var(--white-color);
+  text-decoration: none;
+  margin-left: 25px;
+  padding: 10px 2px;
+  font-size: 0.938rem;
+}
+.active {
+  border-bottom: 2px solid var(--white-color);
+}
+
+main {
+  background-color: var(--first-color);
+  margin-top: 60px;
+  /* height: calc(100vh - 60px); */
+}
+main .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  height: 100vh;
+}
+.greetings {
+  margin-top: 13vh;
+  height: 100%;
+}
+.greetings p {
+  font-size: 2.5rem;
+}
+.greetings h1 {
+  color: var(--white-color);
+  font-size: 3rem;
+}
+.greetings h1 span {
+  text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
+}
+.banner {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner img {
+    /* background-color: aqua; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 56% 44% 49% 51% / 30% 30% 70% 70%; */
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.4);
+}
+.scroll-btn {
+  width: 200px;
+  writing-mode: vertical-lr;
+}
+.scroll-btn a {
+  transform: rotate(-180deg);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 2px;
+  font-size: 0.938rem;
+  letter-spacing: 1px;
+}
+.ham-bar {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  header .container {
+    padding: 10px 20px;
+  }
+  .banner {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 60px;
+    right: -80%;
+    width: 80%;
+    height: calc(100vh - 60px);
+  }
+  nav a {
+    color: var(--text-color);
+    margin-top: 10px;
+  }
+  .ham-bar {
+    display: block;
+  }
+  .scroll-btn {
+    display: none;
+  }
+  main .container .greetings h1 {
+    font-size: 5rem;
+  }
+  main .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  .menu {
+    transition: 0.5s ease;
+  }
+  .active {
+    border-color: var(--first-color);
+  }
+  .show {
+    right: 0;
+  }
+}
+
+.sec {
+  /* background-color: aqua; */
+  padding-top: 10vh;
+}
+.sec-title {
+  display: flex;
+  justify-content: center;
+}
+.sec-title h1 {
+  display: inline-block;
+  border-bottom: 2px solid var(--first-color);
+  font-size: 2rem;
+  text-align: center;
+}
+.sec-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 10vh;
+}
+.profile .img-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: gainsboro;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.about-text {
+  padding: 10px;
+}
+.about-text h1 {
+  font-size: 2rem;
+  color: var(--first-color);
+}
+.about-text p,
+.about-text i {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+.about-text .qualification {
+  margin: 20px 0;
+}
+.about-text i {
+  font-size: 25px;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+}
+.social-links a {
+  padding: 5px 10px;
+}
+@media screen and (max-width: 600px) {
+  .sec-content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .profile {
+    width: 100%;
+  }
+  .profile .img-container {
+    width: 150px;
+    height: 150px;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .social-links {
+    justify-content: center;
+  }
+}
+
+.skill-details {
+  padding: 10px;
+}
+.skill-details > div {
+  padding: 10px 20px;
+}
+.skill-banner {
+  width: 100%;
+  overflow: hidden;
+}
+.skill-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.skill-details h2 {
+  color: var(--first-color);
+}
+.skill-details div ul {
+  padding: 10px 0;
+  list-style: none;
+  display: flex;
+}
+.skill-details div ul li {
+  background-color: var(--white-color);
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 0.873rem;
+}
+.skill-details div ul li:hover {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.projects {
+  height: 100vh;
+  background-color: var(--white-color);
+}
+.projects .sec-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  width: 265px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay-action {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  transition: 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover .overlay-action {
+  top: 0;
+}
+.card .overlay-action a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+  .projects {
+    height: auto;
+  }
+  .card {
+    margin: 10px 0;
+  }
+}
+.contact-details {
+  /* background-color: gray; */
+  padding: 10px;
+}
+.contact-details > div {
+  margin: 20px 0;
+}
+.contact-subtitle h2 {
+  font-size: 1rem;
+  color: var(--first-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contact-text p {
+  font-size: 0.973rem;
+  color: var(--text-color);
+}
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.form-control input {
+  width: 49%;
+  padding: 10px 15px;
+}
+.form-control textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  padding: 10px 15px;
+  font-family: "Montserrat", sans-serif;
+}
+.form-control input,
+.form-control textarea {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  border: 1px solid lightgray;
+  transition: 0.2s ease;
+}
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: var(--first-color);
+}
+.form-control button {
+  background: var(--first-color);
+  color: var(--white-color);
+  padding: 10px 25px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .form-control {
+    flex-wrap: wrap;
+  }
+  .form-control input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  section {
+    height: auto;
+  }
+}
+footer {
+  background-color: var(--dark-color);
+  height: 50vh;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  gap: 20px;
+  color: var(--white-color);
+  padding: 20px;
+}
+footer .container > div {
+  display: flex;
+  flex-direction: column;
+}
+footer .container > div h2 {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+footer .container > div p {
+  line-height: 1.6;
+  color: var(--text-color);
+}
+footer .container > div a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 5px 8px;
+}
+footer .container > div a:hover {
+  color: var(--first-color);
+}
+footer .container > div i {
+  color: var(--text-color);
+  font-size: 25px;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    height: auto;
+  }
+  footer .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  footer .social-links {
+    justify-content: flex-start;
+  }
+}
