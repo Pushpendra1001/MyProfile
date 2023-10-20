@@ -116,12 +116,11 @@ main .container {
 .ham-bar {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
   .container {
     width: 100%;
     margin: 0;
     padding: 10px;
-    
   }
   header {
     position: fixed;
@@ -162,9 +161,13 @@ main .container {
     display: none;
   }
   main .container .greetings h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
+  }
+  .greetings{
+    width: 100%;
   }
   main .container {
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
   }
