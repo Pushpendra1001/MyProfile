@@ -70,7 +70,7 @@ main .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .greetings {
   margin-top: 13vh;
@@ -121,7 +121,10 @@ main .container {
     width: 100%;
     margin: 0;
     padding: 10px;
+    display: flex;
   }
+
+  
   header {
     position: fixed;
     top: 0;
@@ -132,7 +135,7 @@ main .container {
     padding: 10px 20px;
   }
   .banner {
-    display: none;
+    width: 100%;
   }
   .logo {
     width: 100%;
@@ -164,7 +167,7 @@ main .container {
     font-size: 3.5rem;
   }
   .greetings{
-    width: 100%;
+    width: 100%; 
   }
   main .container {
     width: 100%;
@@ -462,3 +465,5 @@ footer .container > div i {
     justify-content: flex-start;
   }
 }
+
+
