@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 :root {
-  --first-color: #000;
+   --first-color: #040910;
   --white-color: #fafaff;
   --dark-color: #2a3b47;
-  --text-color: #697477;
+  --text-color: #697477; 
+  --text-color2: #05C3DD;
+  
+
 }
 html {
   scroll-behavior: smooth;
@@ -12,13 +15,15 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  
 }
 .container {
-  width: 1024px;
+  width: 1080px;
   margin: 0 auto;
 }
 header {
@@ -58,19 +63,20 @@ nav a {
   font-size: 0.938rem;
 }
 .active {
-  border-bottom: 2px solid var(--white-color);
+  border-bottom: 2px solid var(--text-color2);
 }
 
 main {
   background-color: var(--first-color);
   margin-top: 60px;
   /* height: calc(100vh - 60px); */
+  height: 100vh;
 }
 main .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  /* height: 100vh; */
+  gap: 0px;
+  height: 100vh;
 }
 .greetings {
   margin-top: 13vh;
@@ -78,9 +84,8 @@ main .container {
 }
 .greetings p {
   font-size: 2.5rem;
-  /* color: var(--white-color);
-   */
-   color: red;
+  color: var(--text-color2);
+  
 }
 .greetings h1 {
   color: var(--white-color);
@@ -93,16 +98,15 @@ main .container {
   height: 100%;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .banner img {
     /* background-color: aqua; */
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 56% 44% 49% 51% / 30% 30% 70% 70%; */
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.4);
+  
+  box-shadow: -0px 10px 12px rgba(0, 0, 0, 0.4);
+  filter: contrast(1.2) brightness(1.1) grayscale(0.2) ;
 }
 .scroll-btn {
   width: 200px;
@@ -110,7 +114,8 @@ main .container {
 }
 .scroll-btn a {
   transform: rotate(-180deg);
-  color: var(--white-color);
+  color: var(--text-color2);
+  
   text-decoration: none;
   padding: 2px;
   font-size: 0.938rem;
@@ -126,6 +131,7 @@ main .container {
     padding: 10px;
     display: flex;
   }
+  
 
   
   header {
@@ -183,13 +189,10 @@ main .container {
   .active {
     border-color: var(--first-color);
   }
-  .show {
-    right: 0;
-  }
+ 
 }
 
 .sec {
-  /* background-color: aqua; */
   padding-top: 10vh;
 }
 .sec-title {
@@ -209,17 +212,18 @@ main .container {
   margin-top: 10vh;
 }
 .profile .img-container {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
   background-color: gainsboro;
   border-radius: 50%;
   margin: 0 auto;
+  box-shadow: -5px 7px 30px black;
 }
 .img-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .about-text {
   padding: 10px;
@@ -232,6 +236,7 @@ main .container {
 .about-text i {
   color: var(--text-color);
   line-height: 1.6;
+  
 }
 .about-text .qualification {
   margin: 20px 0;
@@ -244,8 +249,17 @@ main .container {
   align-items: center;
 }
 .social-links a {
-  padding: 5px 10px;
+  
+  padding: 5px 20px 5px 0px ;
 }
+.social-links a i{
+  padding-top: 20px;
+  font-size: 32px;
+}
+.social-links a  :hover{
+  color: var(--text-color2);
+}
+
 @media screen and (max-width: 600px) {
   .sec-content {
     width: 100%;
