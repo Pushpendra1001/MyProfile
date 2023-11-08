@@ -467,6 +467,12 @@ footer .container > div i {
   footer .social-links {
     justify-content: flex-start;
   }
+
+  body{
+    width: fit-content,
+    
+  };
+
 }
 
 
