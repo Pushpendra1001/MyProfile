@@ -5,7 +5,6 @@
   --dark-color: #2a3b47;
   --text-color: #697477; 
   --text-color2: #05C3DD;
-  
 
 }
 html {
@@ -38,7 +37,7 @@ header {
 }
 
 .ResumeButton{
-background-color: aqua;
+background-color: var(--text-color2);
 padding: 10px 20px;
 border-radius: 10px;
 }
@@ -84,9 +83,12 @@ main .container {
   gap: 0px;
   height: 100vh;
 }
+
 .greetings {
   margin-top: 13vh;
   height: 100%;
+  user-select: none;
+  width: 50%;
 }
 .greetings p {
   font-size: 2.5rem;
@@ -101,6 +103,7 @@ main .container {
   text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
 }
 .banner {
+  width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -232,6 +235,7 @@ main .container {
   object-fit: cover;
 }
 .about-text {
+  user-select: none;
   padding: 10px;
 }
 .about-text h1 {
@@ -338,6 +342,7 @@ main .container {
   position: relative;
   border-radius: 10px;
   cursor: pointer;
+ 
 }
 .card img {
   width: 100%;
